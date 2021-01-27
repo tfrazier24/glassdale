@@ -1,0 +1,16 @@
+.criminal-list{
+    /* border: 1px dotted black; */
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    
+};
+
+
+
+.dark-background{
+    background-color: #2b362e;
+    color: #fafcfb;
+  };
+
+  
