@@ -1,20 +1,30 @@
-import { getOfficers, useOfficers } from './officerDataProvider.js'
-import { Officer } from './officer.js'
+import { getOfficers, useOfficers } from './officerDataProvider.js';
+import { Officer } from './officer.js';
 
-let officerHTMLContainer = document.querySelector(".officer-list")
+// let officerHTMLContainer = document.querySelector(".officer-list")
 
-export const OfficerList = () => {
-    getOfficers()
-    .then(() => {
-        let officerListHTML = ""
-        const officers = useOfficers()
-            for(let i = 0; i < officers.length; i++){
-                officerListHTML += Officer(officers[i])
-            }
-            officerHTMLContainer.innerHTML = officerListHTML
+export const OfficerList = (arrestingOfficerFilter) => {
+    let officerListContainer = document.querySelector(".officer-list");
+    officerListContainer.innerHTML = "";
+
+    getOfficers().then(() => {
+        let arrestingOfficer = useOfficers();
+        console.log(arrestingOfficer)
+        if(arrestingOfficerFilter){
+            arrestingOfficer = arrestingOfficer.filter(officerThatArrested => {
+                return officerThatArrested.name === arrestingOfficerFilter
+            })
+        }
+        arrestingOfficer.forEach((singleOfficer) => {
+            officerListContainer.innerHTML += Officer(singleOfficer)
+        }
+
+        )
     }
+
     )
 }
+
 
 document.querySelector("#officers-nav-link").addEventListener("click", function() {
     // invoke the function that prints the officers

@@ -34,7 +34,7 @@ eventHub.addEventListener("change", (eventObject) => {
     // To be more specific, we need to know specifically what we clicked on
     console.log("Here is the element you clicked on: ", eventObject.target)
 
-    if(event.target.id === "crimeSelect"){
+    if(eventObject.target.id === "crimeSelect"){
         console.log("You selected something from the crime dropdown")
         console.log("This is the crime that was selected: ", eventObject.target.value)
         // Your code goes here!
