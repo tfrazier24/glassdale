@@ -1,8 +1,6 @@
 import { getOfficers, useOfficers } from './officerDataProvider.js';
 import { Officer } from './officer.js';
 
-// let officerHTMLContainer = document.querySelector(".officer-list")
-
 export const OfficerList = (arrestingOfficerFilter) => {
     let officerListContainer = document.querySelector(".officer-list");
     officerListContainer.innerHTML = "";

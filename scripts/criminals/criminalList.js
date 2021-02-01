@@ -1,8 +1,6 @@
 import { getCriminals, useCriminals } from './criminalDataProvider.js';
 import { Criminal } from './criminal.js';
-
-// let criminalHTMLContainer = document.querySelector(".criminal-list")  
-
+  
 export const CriminalList = (convictionFilter, arrestingOfficerFilter) => {
     let criminalListContainer = document.querySelector(".criminal-list");
     let officerListContainer = document.querySelector(".officer-list")
@@ -37,4 +35,5 @@ document.querySelector("#criminals-nav-link").addEventListener("click", function
     // invoke the function that prints the criminals
     CriminalList()
 })
+
 

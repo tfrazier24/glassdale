@@ -1,5 +1,8 @@
 import { ConvictionSelect } from './convictions/convictionSelect.js'
 import { OfficerSelect } from './officers/officerSelect.js'
+import {NoteForm} from './notes/noteForm.js'
+import {} from './notes/noteList.js'
+import {  } from "./associates/associateList.js";
 
 const darkModeButton = document.querySelector("#dark-mode")
 
@@ -15,3 +18,4 @@ document.querySelector("#dark-mode").addEventListener("click", function(){
 
 ConvictionSelect()
 OfficerSelect()
+NoteForm()
