@@ -1,4 +1,6 @@
 import { saveNote } from './noteDataProvider.js'
+import {NoteList} from './noteList.js'
+
 const contentTarget = document.querySelector(".noteFormContainer")
 
 contentTarget.addEventListener("click", clickEvent => {
@@ -13,7 +15,7 @@ contentTarget.addEventListener("click", clickEvent => {
     
         // // Change API state and application state
         saveNote(newNote)
-        // .then(NoteList) // Refresh your list of notes once you've saved your new one
+         .then(NoteList) // Refresh your list of notes once you've saved your new one
     }
 })
 
