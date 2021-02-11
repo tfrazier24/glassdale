@@ -3,6 +3,8 @@ import { OfficerSelect } from './officers/officerSelect.js'
 import {NoteForm} from './notes/noteForm.js'
 import { NoteList } from './notes/noteList.js'
 import {  } from "./associates/associateList.js";
+import {getCriminals} from './criminals/criminalDataProvider.js'
+
 
 const darkModeButton = document.querySelector("#dark-mode")
 
